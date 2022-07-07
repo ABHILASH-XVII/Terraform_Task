@@ -30,5 +30,21 @@ variable "subnet_address" {
   default = ["10.0.0.0/27", "10.0.0.32/27"]
 }
 
+variable "nsg_name" {
+  type = string
+  default = "Security-Group1"
+}
 
-
+variable "nsg_rules" {
+  type = list(object({
+    name                       = string
+    priority                   = number
+    direction                  = string
+    access                     = string
+    protocol                   = string
+    source_port_range          = string
+    destination_port_range     = string
+    source_address_prefix      = string
+    destination_address_prefix = string
+  }))
+}

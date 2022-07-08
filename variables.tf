@@ -48,3 +48,18 @@ variable "nsg_rules" {
     destination_address_prefix = string
   }))
 }
+
+variable "nic_name"{
+  type = string
+  default = "NIC-1"
+}
+
+variable "ipconfig_name" {
+  type = string
+  default = "IPCONFIG_1"  
+}
+
+variable "vm_name" {
+  type = string
+  default = "VM-1"
+}
